@@ -136,11 +136,13 @@ The project successfully detected:
 * Rule Development
 * Cybersecurity Lab Design
 
+---
+
   ## Installation
 
 A complete step-by-step installation guide is available in:
 
-📂 **setup/setup.md**
+ **setup/setup.md**
 
 This guide includes:
 
