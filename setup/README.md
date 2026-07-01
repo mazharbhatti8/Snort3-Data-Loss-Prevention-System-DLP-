@@ -347,7 +347,7 @@ The implemented rules should generate alerts for:
 ## Verify Network Interface
 
 ```bash
-ip addr
+ip a
 ```
 
 Example Interface
