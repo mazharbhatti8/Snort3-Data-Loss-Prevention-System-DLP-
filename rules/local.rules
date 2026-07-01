@@ -1,1 +1,33 @@
+alert icmp any any -> any any (msg:"ICMP Ping Detected"; sid:1000001; rev:1;)
 
+alert tcp any any -> any any (msg:"Nmap XMAS Tree Scan Detected"; flags:FPU; sid:1000002; rev:1;)
+
+alert tcp any any -> any 23 (msg:"Telnet Login Attempt"; sid:1000003; rev:1;)
+
+alert tcp any any -> any 80 (msg:"Malicious Executable Download"; content:"malware.exe"; sid:1000004; rev:1;)
+
+alert tcp any any -> any 21 (msg:"FTP Connection Attempt"; sid:1000008; rev:1;)
+
+alert tcp any any -> any 80 (msg:"HTTP GET Request"; content:"GET"; sid:1000009; rev:1;)
+
+alert tcp any any -> any 80 (msg:"HTTP POST Request"; content:"POST"; sid:1000010; rev:1;)
+
+alert tcp any any -> any any (msg:"Password Keyword Detected"; content:"password"; nocase; sid:1000011; rev:1;)
+
+alert tcp any any -> any any (msg:"Admin Login Attempt"; content:"admin"; nocase; sid:1000012; rev:1;)
+
+alert tcp any any -> any 80 (msg:"Possible SQL Injection"; content:"' OR 1=1"; nocase; sid:1000013; rev:1;)
+
+alert tcp any any -> any any (msg:"DLP ALERT: Credit Card Number Detected"; pcre:"/4[0-9]{12}(?:[0-9]{3})?/"; sid:2000001; rev:1;)
+
+alert tcp any any -> any any (msg:"DLP ALERT: Email Address Detected"; pcre:"/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/"; sid:2000002; rev:1;)
+
+alert tcp any any -> any any (msg:"DLP ALERT: Government ID Pattern Detected"; pcre:"/\d{3}-\d{2}-\d{4}/"; sid:2000003; rev:1;)
+
+alert tcp any any -> any any (msg:"DLP ALERT: Confidential Project Leaked"; content:"CONFIDENTIAL-PROJECT"; sid:2000004; rev:1;)
+
+alert tcp any any -> any any (msg:"DLP ALERT: Confidential Document Transfer"; content:"CONFIDENTIAL"; sid:2000005; rev:1;)
+
+alert tcp any any -> any any (msg:"DLP ALERT: Password Disclosure"; content:"password="; sid:2000006; rev:1;)
+
+alert tcp any any -> any any (msg:"DLP ALERT: API Key Exposure"; content:"api_key"; sid:2000007; rev:1;)
