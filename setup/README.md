@@ -371,4 +371,7 @@ The completed lab consists of:
 - Custom Snort Detection Rules
 - Real-Time Alert Generation
 
+# Work Flow
+To recreate this lab environment, first install Oracle VirtualBox on your host machine. Download and set up an Ubuntu Server virtual machine to act as the Snort monitoring server, and import the Kali Linux VirtualBox image to use as the attacker machine. Configure both virtual machines to use the same Internal Network so they can communicate with each other. On Ubuntu Server, update the system packages using sudo apt update and sudo apt upgrade -y, then install Snort using sudo apt install snort -y and verify the installation with snort -V. Configure Snort by adding the custom detection rules to the local.rules file and validate the configuration using sudo snort -c /usr/local/etc/snort/snort.lua -T. Start Snort in IDS mode on the correct network interface using sudo snort -c /usr/local/etc/snort/snort.lua -i <interface> -A alert_fast. On the Kali Linux machine, use Nmap, Ping, Netcat, and Wireshark to generate and analyze network traffic. As the traffic passes through the monitored network, Snort inspects the packets and generates real-time alerts whenever they match the custom intrusion detection or Data Loss Prevention (DLP) rules, successfully demonstrating the project's functionality.
+
 Following this guide allows anyone to recreate the complete Snort 3 Data Loss Prevention (DLP) lab from scratch.
