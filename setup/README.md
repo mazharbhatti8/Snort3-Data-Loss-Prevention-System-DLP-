@@ -89,7 +89,7 @@ https://www.wireshark.org/
 
 RAM
 
-4 GB
+3 GB
 
 CPU
 
@@ -101,7 +101,9 @@ Storage
 
 Network Adapter
 
-Internal Network
+Enable 2 adapter 
+NAT
+Host Only 
 
 ---
 
@@ -121,7 +123,9 @@ Storage
 
 Network Adapter
 
-Internal Network
+Enable 2 adapter 
+NAT
+Host Only 
 
 ---
 
@@ -137,7 +141,7 @@ Kali Linux
       │
       ▼
 =========================
- VirtualBox Internal Network
+ VirtualBox Host only network
 =========================
       │
       ▼
@@ -154,7 +158,7 @@ Snort 3
 Find Ubuntu IP Address
 
 ```bash
-ip addr
+ip a
 ```
 
 From Kali Linux
@@ -177,7 +181,7 @@ sudo apt upgrade -y
 
 ---
 
-# Install Snort
+# Install Snort Inside Ubuntu Server
 
 ```bash
 sudo apt install snort -y
@@ -190,8 +194,8 @@ snort -V
 ```
 
 ---
-
-# Install Nmap
+# Kali Linux
+## Install Nmap 
 
 Nmap is pre-installed on Kali Linux.
 
@@ -203,7 +207,7 @@ nmap --version
 
 ---
 
-# Install Wireshark
+## Install Wireshark
 
 Wireshark is pre-installed on Kali Linux.
 
@@ -215,7 +219,7 @@ wireshark
 
 ---
 
-# Configure Snort
+# Configure Snort In Ubuntu 
 
 Edit the local rule file.
 
@@ -251,7 +255,7 @@ Replace **enp0s8** with your network interface if it is different.
 
 ---
 
-# Generate Test Traffic
+# Generate Test Traffic From Kali
 
 ## Ping Detection
 
