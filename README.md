@@ -1,5 +1,4 @@
-# Snort3-Data-Loss-Prevention-System-DLP-
-Network-Based Data Loss Prevention (DLP) System using Snort 3 with custom detection rules for sensitive data and intrusion detection.
+
 # Snort 3 Data Loss Prevention (DLP) System
 
 ## Overview
@@ -106,7 +105,9 @@ The project successfully detected:
 * Government ID Patterns
 * API Key Exposure
 
----## Limitations
+---
+
+## Limitations
 
 * Detection depends on predefined Snort rules.
 * Encrypted traffic cannot be fully inspected.
@@ -134,6 +135,21 @@ The project successfully detected:
 * Network Traffic Analysis
 * Rule Development
 * Cybersecurity Lab Design
+
+  ## Installation
+
+A complete step-by-step installation guide is available in:
+
+📂 **setup/setup.md**
+
+This guide includes:
+
+- Oracle VirtualBox installation
+- Ubuntu Server installation
+- Kali Linux VM setup
+- Snort installation
+- Network configuration
+- Testing procedures
 
 ---
 
